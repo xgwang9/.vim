@@ -9,4 +9,4 @@ sudo apt install build-essential cmake vim-nox python3-dev -y
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-cp .vimrc ~/
+cp ~/.vim/.vimrc ~/
