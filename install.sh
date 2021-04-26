@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# cscope
-sudo apt install cscope -y
+# cscope, curl
+sudo apt install cscope curl -y
 # vim: Youcompleteme
 sudo apt install build-essential cmake vim-nox python3-dev -y
 
