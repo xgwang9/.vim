@@ -11,3 +11,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cp ~/.vim/.vimrc ~/
+
+# We need to run :PlugInstall in vim to install all plugins
+# Run PlugInstall non-interactively from command line
+vim +'PlugInstall --sync' +qa
