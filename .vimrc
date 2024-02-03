@@ -19,6 +19,9 @@ set textwidth=80
 " Set the text width for automatic word wrapping
 set tw=79
 
+" Auto exec RltvNmbr
+autocmd VimEnter * RltvNmbr
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -62,6 +65,8 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'dr-kino/cscope-maps'
 " linux coding style 
 Plug 'vivien/vim-linux-coding-style'
+" Display relative line numbers
+Plug 'vim-scripts/RltvNmbr.vim'
 
 " Initialize plugin system
 call plug#end()
