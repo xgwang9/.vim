@@ -1,7 +1,13 @@
 syntax on
 
-" Add line number
+" Enable (relative) line numbers
 set nu
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+
 set smartcase
 set smartindent
 set nowrap
@@ -20,7 +26,8 @@ set textwidth=80
 set tw=79
 
 " Auto exec RltvNmbr
-autocmd VimEnter * RltvNmbr
+" We don't need this plugin, as we can always move cursor using [number]j and [number]k
+"autocmd VimEnter * RltvNmbr
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -65,8 +72,9 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'dr-kino/cscope-maps'
 " linux coding style 
 Plug 'vivien/vim-linux-coding-style'
+
 " Display relative line numbers
-Plug 'vim-scripts/RltvNmbr.vim'
+"Plug 'vim-scripts/RltvNmbr.vim'
 
 " Initialize plugin system
 call plug#end()
