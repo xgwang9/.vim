@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sudo apt update -y
+
 # cscope, curl
 sudo apt install cscope curl -y
 # vim: Youcompleteme
